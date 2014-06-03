@@ -27,4 +27,14 @@ double BSCall(double Spot);
 
 double BSCallWithParams(const MyMatrix& parametersMatrix);
 
+double BSPutWithParams(const MyMatrix& parametersMatrix);
+
+double BSForwardWithParams(const MyMatrix& parametersMatrix);
+
+double BSDigitalCallWithParams(const MyMatrix& parametersMatrix);
+
+double BSDigitalPutWithParams(const MyMatrix& parametersMatrix);
+
+double BSZeroCouponBondWithParams(const MyMatrix& parametersMatrix);
+
 #endif
