@@ -68,8 +68,12 @@ MCVanillaCall(const MyMatrix& parametersMatrix) {
 
 double // Return price of  given  spot, r, d,vol,expiry,nameOfOption,numPaths,strike
 MCVanillaChoice(const CellMatrix& parametersMatrix) {
-	/*if ( (parametersMatrix.ColumnsInStructure < 8 || parametersMatrix.ColumnsInStructure() >9 ) && parametersMatrix.RowsInStructure() != 1 )
-	{throw("Input matrix should be 1 x 7");}*/
+	// check selected area has the correct size
+	if ( parametersMatrix.ColumnsInStructure() < 8  || parametersMatrix.ColumnsInStructure() > 9 ||
+		parametersMatrix.RowsInStructure() !=1 )
+	{
+		throw("Input matrix should be 1 x 8 or 1x9");
+	}
 	double Spot =  parametersMatrix(0,0).NumericValue();
 	double r =  parametersMatrix(0,1).NumericValue();
 	double d =  parametersMatrix(0,2).NumericValue();
@@ -78,8 +82,12 @@ MCVanillaChoice(const CellMatrix& parametersMatrix) {
 	std::string name = parametersMatrix(0,5).StringValue();
 	//std::string name = "put";
 	unsigned long NumberOfPaths = parametersMatrix(0,6).NumericValue();
-	double Strike[1];
+	double Strike[2];
 	Strike[0] = parametersMatrix(0,7).NumericValue();
+	// extra value for double digital - can't use an if statement as Strike[1] goes out of scope
+	Strike[1] = (parametersMatrix.ColumnsInStructure()==9) ? 
+		parametersMatrix(0,8).NumericValue() : 110;
+
 	//double Low,Up; 
 	/*if ()
 	Strike[1]=200;*/

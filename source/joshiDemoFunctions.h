@@ -13,6 +13,7 @@
 #include <xlw/MJCellMatrix.h> // added for having a matrix of parameters of mixed type
 #include <MCStatistics.h>
 #include <Antithetic.h>
+#include <DoubleDigital2.h>
 #include <Arrays.h>
 #include <ConvergenceTable.h>
 #include <SimpleMC8.h>
