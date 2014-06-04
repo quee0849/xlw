@@ -3,28 +3,6 @@
 #pragma warning (disable : 4996)
 
 
-short // echoes a short
-EchoShort(short x // number to be echoed
-           )
-{
-    return x;
-}
-
-MyMatrix AddMatrix(const MyMatrix& matrixA, const MyMatrix& matrixB) {
-
-	if (matrixA.rows() != matrixB.rows() || matrixA.columns() != matrixB.columns()){
-	throw("matrices must be of the same size");}
-
-	MyMatrix result(matrixA.rows(), matrixB.columns());
-
-	for (size_t r=0; r<matrixA.rows();r++) {
-		for (size_t c= 0 ; c < matrixB.columns(); c++) {
-		result(r,c) = matrixA(r,c)+ matrixB(r,c);
-		}
-	}
-	return result;
-
-}
 
 double BSCall(double Spot) {
 	return BlackScholesCall(Spot, 100,0.05,0.0,0.15,1);
