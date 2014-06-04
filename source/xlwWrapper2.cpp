@@ -150,7 +150,7 @@ MCVanillaCallArgs[]=
   XLRegistration::XLFunctionRegistrationHelper
 registerMCVanillaCall("xlMCVanillaCall",
 "MCVanillaCall",
-" Return the price of vanilla call given spot, strike, r, d, vol, expiry ",
+" Return the price of vanilla call given spot, strike, r, d, vol, expiry, numPaths ",
 LibraryName,
 MCVanillaCallArgs,
 1
@@ -205,7 +205,7 @@ MCVanillaChoiceArgs[]=
   XLRegistration::XLFunctionRegistrationHelper
 registerMCVanillaChoice("xlMCVanillaChoice",
 "MCVanillaChoice",
-" Return the price of vanilla call given nameOfOption, spot, strike, r, d, vol, expiry ",
+" Return the price of vanilla call given spot, r, d, vol, expiry, name, numPaths, Strike ",
 LibraryName,
 MCVanillaChoiceArgs,
 1

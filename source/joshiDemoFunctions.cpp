@@ -68,20 +68,21 @@ MCVanillaCall(const MyMatrix& parametersMatrix) {
 
 double // Return price of  given  spot, r, d,vol,expiry,nameOfOption,numPaths,strike
 MCVanillaChoice(const CellMatrix& parametersMatrix) {
-	if ( (parametersMatrix.columns() < 8 || parametersMatrix.columns() >9 ) && parametersMatrix.rows() != 1 )
-	{throw("Input matrix should be 1 x 7");}
-	double Spot =  parametersMatrix(0,0);
-	double r =  parametersMatrix(0,1);
-	double d =  parametersMatrix(0,2);
-	double vol =  parametersMatrix(0,3);
-	double expiry = parametersMatrix(0,4); 
-	//std::string name = parametersMatrix(0,5);
-	std::string name = "put";
-	unsigned long NumberOfPaths = parametersMatrix(0,6);
+	/*if ( (parametersMatrix.ColumnsInStructure < 8 || parametersMatrix.ColumnsInStructure() >9 ) && parametersMatrix.RowsInStructure() != 1 )
+	{throw("Input matrix should be 1 x 7");}*/
+	double Spot =  parametersMatrix(0,0).NumericValue();
+	double r =  parametersMatrix(0,1).NumericValue();
+	double d =  parametersMatrix(0,2).NumericValue();
+	double vol =  parametersMatrix(0,3).NumericValue();
+	double expiry = parametersMatrix(0,4).NumericValue(); 
+	std::string name = parametersMatrix(0,5).StringValue();
+	//std::string name = "put";
+	unsigned long NumberOfPaths = parametersMatrix(0,6).NumericValue();
 	double Strike[1];
-	Strike[0] = parametersMatrix(0,7);
+	Strike[0] = parametersMatrix(0,7).NumericValue();
 	//double Low,Up; 
-	//Strike[1]=200;
+	/*if ()
+	Strike[1]=200;*/
 // create an option of type name with give strike(s) from the factory
     PayOff* PayOffPtr = PayOffFactory::Instance().CreatePayOff(name,Strike); 
 	//now convert this payoffptr to a VanillaOption to plug in to SimpleMonteCarlo6

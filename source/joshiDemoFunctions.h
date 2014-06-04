@@ -35,11 +35,11 @@ EchoShort(short x // number to be echoed
 MyMatrix // adds two matrices together after checking they're the same size.
 AddMatrix(const MyMatrix& matrixA, const MyMatrix& matrixB);
 
-double // Return the price of vanilla call given spot, strike, r, d, vol, expiry
+double // Return the price of vanilla call given spot, strike, r, d, vol, expiry, numPaths
 MCVanillaCall(const MyMatrix& parametersMatrix);
 
-double // Return the price of vanilla call given nameOfOption, spot, strike, r, d, vol, expiry
-MCVanillaChoice(const MJCellMatrix& parametersMatrix);
+double // Return the price of vanilla call given spot, r, d, vol, expiry, name, numPaths, Strike
+MCVanillaChoice(const CellMatrix& parametersMatrix);
 
 
 #endif
