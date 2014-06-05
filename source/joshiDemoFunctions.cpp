@@ -66,7 +66,8 @@ MCVanillaCall(const MyMatrix& parametersMatrix) {
 }
 
 
-double // Return price of  given  spot, r, d,vol,expiry,nameOfOption,numPaths,strike
+
+CellMatrix // Return price of  given  spot, r, d,vol,expiry,nameOfOption,numPaths,strike
 MCVanillaChoice(const CellMatrix& parametersMatrix) {
 	// check selected area has the correct size
 	if ( parametersMatrix.ColumnsInStructure() < 8  || parametersMatrix.ColumnsInStructure() > 9 ||
@@ -101,6 +102,8 @@ MCVanillaChoice(const CellMatrix& parametersMatrix) {
 		ParametersConstant VolParam(vol);
 		ParametersConstant rParam(r);
 
+
+		StatisticsBasic gathererBasic;
 		StatisticsMean gatherer;
 		ConvergenceTable gathererTwo(gatherer);
 
@@ -113,15 +116,19 @@ MCVanillaChoice(const CellMatrix& parametersMatrix) {
                                       VolParam,
                                       rParam,
                                       NumberOfPaths,
-                                      gathererTwo,
+                                      gathererBasic,
 									  generator); // no Antithetic
                                       //GenTwo); // Antithetic
 
         delete PayOffPtr;
-		return gathererTwo.GetResultsSoFar()[gathererTwo.GetResultsSoFar().size()-1][0];
+		CellMatrix resultMatrix(1,3); 
+		resultMatrix(0,0) = (gathererBasic.GetResultsSoFar()[0][0]); //mean
+		resultMatrix(0,1) = (gathererBasic.GetResultsSoFar()[0][1]); //var
+		resultMatrix(0,2) = (gathererBasic.GetResultsSoFar()[0][2]); //std error
+		return resultMatrix;
+		
 
     }
     // if Payoffptr is null
-	return 0.0;
 
 }

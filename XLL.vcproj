@@ -52,7 +52,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\Users\simon\Downloads\DesignCPP\include;&quot;$(XLW)\xlw\include&quot;;.\source"
+				AdditionalIncludeDirectories="&quot;C:\Program Files\boost\boost_1_55_0&quot;;C:\Users\simon\Downloads\DesignCPP\include;&quot;$(XLW)\xlw\include&quot;;.\source"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;XLWVISIO_EXPORTS"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -372,7 +372,31 @@
 			Name="Header Files"
 			>
 			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\AntiThetic.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Arrays.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Bisection.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Downloads\DesignCPP\include\BlackScholesFormulas.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\BSCallTwo.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\BSCallTwo.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\ConvergenceTable.h"
 				>
 			</File>
 			<File
@@ -380,7 +404,71 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\DoubleDigital2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\source\joshiDemoFunctions.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\MCStatistics.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\MersTwister.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Downloads\DesignCPP\include\Normals.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Parameters.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\ParkMiller.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\PayOff3.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\PayOffBridge.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\PayOffConstructible.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\PayOffFactory.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\PayOffForward.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Random2.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Random3.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\SimpleMC8.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\Vanilla3.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\include\wrapper.h"
 				>
 			</File>
 		</Filter>
@@ -388,7 +476,35 @@
 			Name="Source Files"
 			>
 			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\AntiThetic.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\Arrays.cpp"
+				>
+			</File>
+			<File
 				RelativePath="..\..\Downloads\DesignCPP\source\BlackScholesFormulas.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\ConvergenceTable.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\DoubleDigital2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\source\joshiDemoFunctions.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\MCStatistics.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\MersTwister.cpp"
 				>
 			</File>
 			<File
@@ -396,7 +512,51 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\Parameters.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\ParkMiller.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\PayOff3.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\PayOffBridge.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\PayOffFactory.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\PayOffForward.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\PayOffRegistration.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\Random2.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\Random3.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\SimpleMC8.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\source\source.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\Downloads\DesignCPP\source\Vanilla3.cpp"
 				>
 			</File>
 		</Filter>
@@ -405,6 +565,10 @@
 			>
 			<File
 				RelativePath=".\source\xlwWrapper.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\source\xlwWrapper2.cpp"
 				>
 			</File>
 		</Filter>
