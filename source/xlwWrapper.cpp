@@ -246,6 +246,281 @@ EXCEL_END
 
 //////////////////////////
 
+namespace
+{
+XLRegistration::Arg
+BSPutWithParamsArgs[]=
+{
+{ "parametersMatrix","too lazy to comment this one ","XLF_OPER"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerBSPutWithParams("xlBSPutWithParams",
+"BSPutWithParams",
+"too lazy to comment this function ",
+LibraryName,
+BSPutWithParamsArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlBSPutWithParams(
+LPXLFOPER parametersMatrixa)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+XlfOper parametersMatrixb(
+	(parametersMatrixa));
+MyMatrix parametersMatrix(
+	parametersMatrixb.AsMatrix("parametersMatrix"));
+
+double result(
+	BSPutWithParams(
+		parametersMatrix)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+BSForwardWithParamsArgs[]=
+{
+{ "parametersMatrix","too lazy to comment this one ","XLF_OPER"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerBSForwardWithParams("xlBSForwardWithParams",
+"BSForwardWithParams",
+"too lazy to comment this function ",
+LibraryName,
+BSForwardWithParamsArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlBSForwardWithParams(
+LPXLFOPER parametersMatrixa)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+XlfOper parametersMatrixb(
+	(parametersMatrixa));
+MyMatrix parametersMatrix(
+	parametersMatrixb.AsMatrix("parametersMatrix"));
+
+double result(
+	BSForwardWithParams(
+		parametersMatrix)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+BSDigitalCallWithParamsArgs[]=
+{
+{ "parametersMatrix","too lazy to comment this one ","XLF_OPER"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerBSDigitalCallWithParams("xlBSDigitalCallWithParams",
+"BSDigitalCallWithParams",
+"too lazy to comment this function ",
+LibraryName,
+BSDigitalCallWithParamsArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlBSDigitalCallWithParams(
+LPXLFOPER parametersMatrixa)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+XlfOper parametersMatrixb(
+	(parametersMatrixa));
+MyMatrix parametersMatrix(
+	parametersMatrixb.AsMatrix("parametersMatrix"));
+
+double result(
+	BSDigitalCallWithParams(
+		parametersMatrix)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+BSDigitalPutWithParamsArgs[]=
+{
+{ "parametersMatrix","too lazy to comment this one ","XLF_OPER"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerBSDigitalPutWithParams("xlBSDigitalPutWithParams",
+"BSDigitalPutWithParams",
+"too lazy to comment this function ",
+LibraryName,
+BSDigitalPutWithParamsArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlBSDigitalPutWithParams(
+LPXLFOPER parametersMatrixa)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+XlfOper parametersMatrixb(
+	(parametersMatrixa));
+MyMatrix parametersMatrix(
+	parametersMatrixb.AsMatrix("parametersMatrix"));
+
+double result(
+	BSDigitalPutWithParams(
+		parametersMatrix)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+BSZeroCouponBondWithParamsArgs[]=
+{
+{ "parametersMatrix","too lazy to comment this one ","XLF_OPER"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerBSZeroCouponBondWithParams("xlBSZeroCouponBondWithParams",
+"BSZeroCouponBondWithParams",
+"too lazy to comment this function ",
+LibraryName,
+BSZeroCouponBondWithParamsArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlBSZeroCouponBondWithParams(
+LPXLFOPER parametersMatrixa)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+XlfOper parametersMatrixb(
+	(parametersMatrixa));
+MyMatrix parametersMatrix(
+	parametersMatrixb.AsMatrix("parametersMatrix"));
+
+double result(
+	BSZeroCouponBondWithParams(
+		parametersMatrix)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
 //////////////////////////
 // Methods that will get registered to execute in AutoOpen
 //////////////////////////
